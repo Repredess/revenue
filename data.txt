@@ -1,0 +1,1 @@
+id  date  morning_cash  evening_cash  non_cash  consumption  collection
