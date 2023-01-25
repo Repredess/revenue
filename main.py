@@ -18,7 +18,8 @@ class Revenue:
 
         for key, value in self.PULL.items():
             print(key.replace("_", " ") + ":", end=" ")
-            self.PULL[key] = input()
+            a = self.get_data()
+            self.PULL[key] = a
             data.append(self.PULL[key])
 
         return data
@@ -53,9 +54,14 @@ class Revenue:
 
         return revenue
 
-    # get data
+    @classmethod
     def get_data(self):
-        pass
+        while True:
+            get_num = input()
+            if get_num.isdigit():
+                return get_num
+            else:
+                print('Введите целое число не ниже нуля: ', end='')
 
     @classmethod
     def fix_line(cls, file):
@@ -67,7 +73,6 @@ class Revenue:
         with open(file) as f:
             get_ec = f.readlines()
             get_ec = get_ec[-1].strip().split()
-
 
         return int(get_ec[-5])
 
@@ -87,3 +92,7 @@ class Revenue:
 pt = Revenue()
 # print(pt.set_data())
 print(pt.get_revenue())
+
+with open('data.txt', 'r', encoding='utf-8') as f:
+    for i in f.readlines():
+        print(i.strip())
