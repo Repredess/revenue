@@ -1,3 +1,4 @@
 id  date  morning_cash  evening_cash  non_cash  consumption  collection
 1  2022-12-24  1234  1234  1234  1234  1234
 2  2023-01-25  1300  1450  1385  765  0
+3  2023-01-25  1500  234  1234  1234  1234

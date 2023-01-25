@@ -55,7 +55,7 @@ class Revenue:
         return revenue
 
     @classmethod
-    def get_data(self):
+    def get_data(cls):
         while True:
             get_num = input()
             if get_num.isdigit():
@@ -65,7 +65,6 @@ class Revenue:
 
     @classmethod
     def fix_line(cls, file):
-
         return print('', file=file)
 
     @classmethod
@@ -92,7 +91,3 @@ class Revenue:
 pt = Revenue()
 # print(pt.set_data())
 print(pt.get_revenue())
-
-with open('data.txt', 'r', encoding='utf-8') as f:
-    for i in f.readlines():
-        print(i.strip())
